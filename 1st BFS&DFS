@@ -1,0 +1,30 @@
+Algorithm BFS(Graph, start):
+
+1. Create an empty set VISITED
+2. Create a queue Q
+3. Enqueue start node into Q
+
+4. While Q is not empty:
+      a. Dequeue a node N from Q
+      b. If N is not in VISITED:
+            i.   Print N
+            ii.  Add N to VISITED
+            iii. For each neighbor of N in Graph:
+                     Enqueue neighbor into Q
+
+5. End
+
+Algorithm DFS(Graph, start):
+
+1. Create an empty set VISITED
+
+2. Define recursive function DFS_Visit(node):
+      a. If node is not in VISITED:
+            i.   Print node
+            ii.  Add node to VISITED
+            iii. For each neighbor of node in Graph:
+                     Call DFS_Visit(neighbor)
+
+3. Call DFS_Visit(start)
+
+4. End
