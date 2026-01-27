@@ -1,0 +1,22 @@
+MINIMAX(depth, nodeIndex, isMaxPlayer, scores, height):
+
+    IF depth == height:
+        RETURN scores[nodeIndex]
+
+    IF isMaxPlayer == TRUE:
+        bestValue ← -∞
+
+        FOR each child of nodeIndex:
+            value ← MINIMAX(depth + 1, child, FALSE, scores, height)
+            bestValue ← MAX(bestValue, value)
+
+        RETURN bestValue
+
+    ELSE:
+        bestValue ← +∞
+
+        FOR each child of nodeIndex:
+            value ← MINIMAX(depth + 1, child, TRUE, scores, height)
+            bestValue ← MIN(bestValue, value)
+
+        RETURN bestValue
