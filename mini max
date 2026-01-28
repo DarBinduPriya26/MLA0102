@@ -1,4 +1,4 @@
-MINIMAX(depth, nodeIndex, isMaxPlayer, scores, height):
+MINIMAX (depth, nodeIndex, isMaxPlayer, scores, height):
 
     IF depth == height:
         RETURN scores[nodeIndex]
