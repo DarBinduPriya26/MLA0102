@@ -1,0 +1,24 @@
+If depth = 0
+→ Return value of Tree
+
+If player = MAX
+2.1 Set bestValue ← −∞
+2.2 For each child of Tree
+  a. value ← Alpha–Beta Pruning(child, depth − 1, α, β, MIN)
+  b. bestValue ← max(bestValue, value)
+  c. α ← max(α, value)
+  d. If β ≤ α
+    → Break (Beta cut-off)
+2.3 Return bestValue
+
+Else (player = MIN)
+3.1 Set bestValue ← +∞
+3.2 For each child of Tree
+  a. value ← Alpha–Beta Pruning(child, depth − 1, α, β, MAX)
+  b. bestValue ← min(bestValue, value)
+  c. β ← min(β, value)
+  d. If β ≤ α
+    → Break (Alpha cut-off)
+3.3 Return bestValue
+
+End
