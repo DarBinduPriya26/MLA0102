@@ -1,0 +1,19 @@
+1.Extract class labels from Data
+2.If all labels are the same:
+      1.Return that class label
+
+3.If Attributes is empty:
+       1.Return the most frequent class label
+
+4.For each Attribute in Attributes:
+        1.Compute Information Gain
+
+5.Select Attribute with maximum Information Gain
+6.Create a Decision Tree node with this Attribute
+7.For each value v of the selected Attribute:
+        1.Create subset Data₍ᵥ₎ where Attribute = v
+        2.Remove selected Attribute from Attributes
+        3.Recursively call
+        4.Attach Subtree to the current node under value v
+
+8.Return Decision Tree
