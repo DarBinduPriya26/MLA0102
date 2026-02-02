@@ -1,0 +1,22 @@
+Algorithm DECISION_TREE_CONSTRUCTION(Dataset)
+
+1.Compute Entropy of Dataset using ENTROPY(Dataset)
+2.Select attribute a1 as the root node
+3.Split Dataset based on values of a1
+4.If a1 = False:
+       1.All instances belong to class Yes
+       2.Create a leaf node with label Yes
+
+5.If a1 = True:
+      1.Select attribute a3 for further splitting
+
+6.Split data where a1 = True based on values of a3
+7.If a3 = High:
+      1.All instances belong to class No
+      2.Create a leaf node with label No
+
+8.If a3 = Normal:
+      1.All instances belong to class Yes
+      2.Return the constructed Decision Tree
+
+9.Create a leaf node with label Yes
